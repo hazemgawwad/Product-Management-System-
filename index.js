@@ -35,7 +35,7 @@ function addProduct() {
     };
     productList.push(product);
     localStorage.setItem("products", JSON.stringify(productList));
-    displayProduct(productList.length - 1);
+    displayProduct(product);
     clearForm();
   } else {
     alert("Please fill all fields correctly.");
@@ -177,3 +177,4 @@ description.addEventListener(
   validate.bind(null, descriptionRegex, description),
 );
 btnUpdateProduct.addEventListener("click", updateProduct);
+
