@@ -1,0 +1,125 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Product Management System</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <!-- Header -->
+        <div class="card-header">
+          <h1 class="header-title">Product Management System</h1>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-container">
+          <form class="product-form">
+            <!-- Name Input -->
+            <div class="form-group">
+              <label for="productName">Product Name</label>
+              <input
+                type="text"
+                id="productName"
+                class="form-control"
+                placeholder="Enter product name"
+                required
+              />
+              <p class="error-message">
+                Name must be at least 4 characters and start with a capital
+                letter.
+              </p>
+            </div>
+
+            <!-- Category Input -->
+            <div class="form-group">
+              <label for="category">Category</label>
+              <input
+                type="text"
+                id="category"
+                class="form-control"
+                placeholder="Enter category"
+                required
+              />
+              <p class="error-message">
+                Category must be at least 4 characters and start with a capital
+                letter.
+              </p>
+            </div>
+
+            <!-- Price Input -->
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input
+                type="number"
+                id="price"
+                class="form-control"
+                placeholder="Enter price"
+                step="0.01"
+                required
+              />
+              <p class="error-message">Price must be a positive number.</p>
+            </div>
+
+            <!-- Description Textarea -->
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea
+                id="description"
+                class="form-control textarea"
+                placeholder="Enter product description"
+                rows="4"
+                required
+              ></textarea>
+              <p class="error-message">
+                Description must be at least 25 characters and not exceed 100
+                characters.
+              </p>
+            </div>
+
+            <!-- File Upload -->
+            <div class="form-group">
+              <label for="fileUpload">Upload Image</label>
+              <input
+                type="file"
+                id="fileUpload"
+                class="form-control file-input"
+                accept="image/*"
+                required
+              />
+
+            </div>
+
+            <!-- Add Product Button -->
+            <button type="button" class="btn btn-primary">Add Product</button>
+            <!-- Update Product Button -->
+            <button type="button" class="btn btn-info d-none" id="update">
+              Update Product
+            </button>
+          </form>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInput"
+            class="form-control search-input"
+            placeholder="Search Products..."
+          />
+        </div>
+
+        <!-- Product Cards Container -->
+        <div class="products-container" id="productListContainer"></div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
